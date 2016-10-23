@@ -1,0 +1,7 @@
+<div>
+  <% @pubs.each do |pub| %>
+  <a href="/pubs/<%= pub.id  %>"><%= pub.name %></a>  - Address: <%= pub.address %><br><hr>
+  <% end %>
+
+  <a href="/pubs/new">Add new pub</a><br>
+</div>
