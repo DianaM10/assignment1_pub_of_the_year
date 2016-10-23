@@ -18,7 +18,7 @@ end
 
 #show
 get '/pubs/:id' do
-  @pub =Pub.find( params['id'] )
+  @pub =Pub.find(params['id'])
   erb(:'pubs/show')
 end
 #edit

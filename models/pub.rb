@@ -22,6 +22,11 @@ attr_reader( :id, :name, :address)
     return Pub.map_items(sql)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM pubs WHERE id = #{id}"
+    return Pub.map_item(sql)
+  end
+
   def self.delete_all()
     sql = "DELETE FROM pubs"
     SqlRunner.run(sql)
@@ -34,9 +39,11 @@ attr_reader( :id, :name, :address)
   end
 
   def self.map_item(sql)
-    result = Pub.new.map_items(sql)
+    result = Pub.map_items(sql)
     return result.first
   end
+
+
 
 
 
