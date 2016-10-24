@@ -1,5 +1,8 @@
 #index
-
+get '/votes' do
+@votes = Vote.all
+erb( :'votes/index')
+end
 #new
 
 #create

@@ -1,4 +1,11 @@
 <div>
-  <h1><%= @pub.name %></h1>
+  <h1 ><%= @pub.name %></h1>
   <h2><%= @pub.address %></h2>
 </div>
+
+<a href="/pubs/<%= @pub.id %>/edit">Edit</a>
+<br>
+<form action="/pubs/<%= @pub.id %>" method="post">
+<input type="submit" value="Delete"/>
+<input type="hidden" name="_method" value="delete"/>
+</form>

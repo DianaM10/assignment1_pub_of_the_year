@@ -1,3 +1,7 @@
+# use Rack::MethodOverride
+
+require( 'pry-byebug')
+
 #index
 get '/pubs' do
   @pubs = Pub.all
@@ -21,8 +25,23 @@ get '/pubs/:id' do
   @pub =Pub.find(params['id'])
   erb(:'pubs/show')
 end
+
 #edit
+get '/pubs/:id/edit' do
+  @pub = Pub.find( params['id'] )
+  erb( :'pubs/edit')
+end
 
 #update
+put '/pubs/:id' do
+  @pub = Pub.new(params)
+  @pub.update()
+  redirect to( "/pubs/#{params['id']}")
+end
 
 #delete
+delete '/pubs/:id' do
+  @pub = Pub.new(params)
+  @pub.destroy()
+  redirect to( "/pubs")
+end

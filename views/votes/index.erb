@@ -1,0 +1,10 @@
+<div>
+  <% @votes.each do |vote| %>
+  <a>Votes placed by: <%= vote.voted_by.name %>
+  </a>  First vote: <%= vote.first.name %>
+  </a>  Second vote: <%= vote.second.name %>
+  </a>  Third vote: <%= vote.third.name %>
+  <br><hr>
+  <% end %>
+<br>
+</div>

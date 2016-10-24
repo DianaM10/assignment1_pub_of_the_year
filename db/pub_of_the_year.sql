@@ -1,12 +1,13 @@
 DROP TABLE IF EXISTS votes;
--- DROP TABLE IF EXISTS areas;
+DROP TABLE IF EXISTS areas;
 DROP TABLE IF EXISTS pubs;
+
 
 CREATE TABLE pubs(
   id serial4 PRIMARY KEY,
   name VARCHAR(255),
   address VARCHAR(255),
-  area_id int4
+  area_id int4 
 );
 
 CREATE TABLE votes(
@@ -19,7 +20,7 @@ CREATE TABLE votes(
 
 -- CREATE TABLE areas(
 --   id serial4 PRIMARY KEY,
---   pub_id int4 references pubs(area_id) ON DELETE CASCADE,
+--   pub_id int4 references pubs(id) ON DELETE CASCADE,
 --   area_name VARCHAR(255)
 -- );
 

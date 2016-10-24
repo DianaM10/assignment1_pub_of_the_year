@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Pub
 
-attr_reader( :id, :name, :address)
+attr_reader( :id, :name, :address, :area_id)
 
   def initialize(options)
     @id = options['id'].to_i
@@ -30,6 +30,30 @@ attr_reader( :id, :name, :address)
   def self.delete_all()
     sql = "DELETE FROM pubs"
     SqlRunner.run(sql)
+  end
+
+
+  # def self.update(options)
+  #   sql = "UPDATE pubs SET
+  #         name = '#{options['name']}',
+  #         address = '#{options['address']}',  
+  #         area_id = #{options['area_id'].to_i} #.to_i very important!
+  #         WHERE id = #{options['id'].to_i}"
+  #   return SqlRunner.run(sql)
+  # end
+
+  def update()
+    sql = "UPDATE pubs SET
+          name ='#{@name}',
+          address ='#{@address}',  
+          area_id = #{@area_id}
+          WHERE id = #{@id}"
+    return SqlRunner.run(sql)
+  end
+
+  def destroy()
+    sql = "DELETE FROM pubs WHERE id = #{@id}"
+    return SqlRunner.run(sql)
   end
 
   def self.map_items(sql)
