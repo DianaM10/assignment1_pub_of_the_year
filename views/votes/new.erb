@@ -1,0 +1,40 @@
+<h2>Add Votes for a Pub</h2>
+
+<form action="/votes" method="post">
+
+  <label for="name">Select Pub placing votes:</label>
+  <select name="Voted by Pub Name">
+  <% for pub in @pubs %> 
+  <option value="<%= pub.name %>"><%= pub.name %></option>
+  <% end %> 
+  </select>
+ <br>
+ <label for="name">First vote:</label>
+ <select name="Voted by Pub Name">
+ <% for pub in @pubs %> 
+ <option value="<%= pub.name %>"><%= pub.name %></option>
+ <% end %> 
+ </select>
+ <br>
+ <label for="name">Second vote:</label>
+ <select name="Voted by Pub Name">
+ <% for pub in @pubs %> 
+ <option value="<%= pub.name %>"><%= pub.name %></option>
+ <% end %> 
+ </select>
+ <br>
+  <label for="name">Third vote:</label>
+  <select name="Voted by Pub Name">
+  <% for pub in @pubs %> 
+  <option value="<%= pub.name %>"><%= pub.name %></option>
+  <% end %> 
+  </select>
+  <br>
+  <input type='submit' value="Confirm Votes for Pub">
+  
+</form>
+
+
+<br>
+<br>
+<a href="/">Back to </a>

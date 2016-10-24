@@ -39,12 +39,34 @@ attr_reader( :id, :voted_by, :first, :second, :third)
     return result.first
   end
 
-  def name()
-    sql = "SELECT * FROM pubs where id = #{@pub_id}"
+  def find_pub(id)
+    sql = "SELECT * FROM pubs WHERE id = #{id}"
     return Pub.map_item(sql)
   end
 
+  def pub_id(pub_name)
+    sql ="SELECT * FROM pubs WHERE name = #{pub_name}"
+    return Pub.map_item(sql)
+  end
 
+  def self.find(id)
+    sql = "SELECT * FROM votes WHERE id = #{id}"
+    return Vote.map_item(sql)
+  end
+
+  def update()
+    sql = "UPDATE votes SET
+          voted_by =#{@voted_by},
+          first =#{@first},  
+          second = #{@second}
+          WHERE id = #{@id}"
+    return SqlRunner.run(sql)
+  end
+
+  def destroy()
+    sql = "DELETE FROM votes WHERE id = #{@id}"
+    return SqlRunner.run(sql)
+  end
 
 
 

@@ -1,0 +1,19 @@
+<div>
+
+  <a>Votes placed by: <%= @vote.find_pub(@vote.voted_by).name %>
+  </a>  First vote: <%= @vote.find_pub(@vote.first).name %>
+  </a>  Second vote: <%= @vote.find_pub(@vote.second).name%>
+  </a>  Third vote: <%= @vote.find_pub(@vote.third).name %>
+  <br><hr>
+  
+<br>
+</div>
+
+
+<!-- <a href="/votes/<%= @vote.id %>/edit">Edit</a> -->
+<br>
+<form action="/votes/<%= @vote.id %>" method="post">
+<input type="submit" value="Delete"/>
+<input type="hidden" name="_method" value="delete"/>
+</form>
+
