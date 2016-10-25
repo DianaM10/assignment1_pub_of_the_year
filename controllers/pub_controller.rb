@@ -10,11 +10,14 @@ end
 
 #new
 get '/pubs/new' do
+  @pubs = Pub.all
+  @areas = Area.all
   erb( :'pubs/new')
 end
 
 #create
 post '/pubs' do
+  @areas = Area.all
   @pub = Pub.new(params)
   @pub.save
   redirect to( "pubs" )
@@ -28,6 +31,7 @@ end
 
 #edit
 get '/pubs/:id/edit' do
+  @areas = Area.all
   @pub = Pub.find( params['id'] )
   erb( :'pubs/edit')
 end

@@ -8,6 +8,15 @@
     <label for="name">Name:</label>
     <input type="text" name="name" id="name" value="<%= @pub.name %>"><br>
     <input type="text" name="address" value="<%= @pub.address %>"><br>
+    
+    <label for="name">Select area:</label>
+    <select name="area_id">
+    <% for area in @areas %> 
+
+    <option value="<%= area.id %>"><%= area.area_name %></option>
+    
+    <% end %> 
+    </select>
 
     <input type="hidden" name="_method" value="put">
     <input type='submit' value="Update Pub">

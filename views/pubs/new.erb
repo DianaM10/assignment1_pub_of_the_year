@@ -8,9 +8,20 @@
 
   <label for="address">Address:</label>
   <input type="text" name="address" id ="address"><br>
-  <p>For the Area_id, please enter a number. If postcode is EH3, enter 3.  If postcode is EH10, enter 10.</p>
+  <!-- <p>For the Area_id, please enter a number. Put 1 for City Centre, 2 for South, 3 for North, 4 for West and 5 for East</p>
   <label for="area_id">Area_id:</label>
-  <input type="text" name="area_id" id ="area_id">
+  <input type="text" name="area_id" id ="area_id"> -->
+  
+  <label for="name">Select area:</label>
+  <select name="area_id">
+  <% for area in @areas %> 
+
+  <option value="<%= area.id %>"><%= area.area_name %></option>
+  
+  <% end %> 
+  </select>
+
+
   <br>
 
   <input type='submit' value="Add Pub">
