@@ -54,6 +54,7 @@ vote6 = Vote.new({ 'voted_by' => pub6.id, 'first' => pub17.id, 'second' => pub15
 vote7 = Vote.new({ 'voted_by' => pub7.id, 'first' => pub17.id, 'second' => pub8.id, 'third' => pub9.id})
 vote8 = Vote.new({ 'voted_by' => pub8.id, 'first' => pub1.id, 'second' => pub2.id, 'third' => pub3.id})
 vote9 = Vote.new({ 'voted_by' => pub9.id, 'first' => pub15.id, 'second' => pub13.id, 'third' => pub14.id})
+vote10 = Vote.new({ 'voted_by' => pub10.id, 'first' => nil, 'second' => nil, 'third' => nil})
 
 vote1.save
 vote2.save
@@ -64,6 +65,7 @@ vote6.save
 vote7.save
 vote8.save
 vote9.save
+vote10.save
 
 binding.pry
 nil

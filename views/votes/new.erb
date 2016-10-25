@@ -3,30 +3,32 @@
 <form action="/votes" method="post">
 
   <label for="name">Select Pub placing votes:</label>
-  <select name="Voted by Pub Name">
+  <select name="voted_by">
   <% for pub in @pubs %> 
-  <option value="<%= pub.name %>"><%= pub.name %></option>
+
+  <option value="<%= pub.id %>"><%= pub.name %></option>
+  
   <% end %> 
   </select>
  <br>
  <label for="name">First vote:</label>
- <select name="Voted by Pub Name">
+ <select name="first">
  <% for pub in @pubs %> 
- <option value="<%= pub.name %>"><%= pub.name %></option>
+ <option value="<%= pub.id %>"><%= pub.name %></option>
  <% end %> 
  </select>
  <br>
  <label for="name">Second vote:</label>
- <select name="Voted by Pub Name">
+ <select name="second">
  <% for pub in @pubs %> 
- <option value="<%= pub.name %>"><%= pub.name %></option>
+ <option value="<%= pub.id %>"><%= pub.name %></option>
  <% end %> 
  </select>
  <br>
   <label for="name">Third vote:</label>
-  <select name="Voted by Pub Name">
+  <select name="third">
   <% for pub in @pubs %> 
-  <option value="<%= pub.name %>"><%= pub.name %></option>
+  <option value="<%= pub.id %>"><%= pub.name %></option>
   <% end %> 
   </select>
   <br>

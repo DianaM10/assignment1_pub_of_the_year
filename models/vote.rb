@@ -38,6 +38,11 @@ attr_reader( :id, :voted_by, :first, :second, :third)
     result = Vote.map_items(sql)
     return result.first
   end
+  
+  def voter_pub
+    sql = "SELECT * FROM pubs WHERE id = #{@voted_by}"
+    return Pub.map_item(sql)
+  end
 
   def find_pub(id)
     sql = "SELECT * FROM pubs WHERE id = #{id}"
