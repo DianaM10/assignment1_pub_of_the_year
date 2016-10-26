@@ -38,15 +38,15 @@ attr_reader( :id, :name, :address, :area_id)
     SqlRunner.run(sql)
   end
 
+  def self.find_pubs_in_area(area_id)
+    sql = "SELECT * FROM pubs WHERE area_id = #{area_id}"
+    return Pub.map_items(sql)
+  end
 
-  # def self.update(options)
-  #   sql = "UPDATE pubs SET
-  #         name = '#{options['name']}',
-  #         address = '#{options['address']}',  
-  #         area_id = #{options['area_id'].to_i} #.to_i very important!
-  #         WHERE id = #{options['id'].to_i}"
-  #   return SqlRunner.run(sql)
-  # end
+  def find_pubs_in_area()
+    sql = "SELECT * FROM pubs WHERE area_id = #{@area_id}"
+    return Pub.map_items(sql)
+  end
 
   def update()
     sql = "UPDATE pubs SET

@@ -45,6 +45,20 @@ class TestAnalysis < MiniTest::Test
 
   
 
+  # def test_pubs_and_points_for_area
+  # pubs = Pub.all
+  # Analysis.pubs_and_points_for_area(pubs)
+
+
+#   def test_sort_pubs_and_points_for_area
+#     areas = Area.all
+#     for area in areas
+#     Analysis.sort_pubs_and_points_for_area(area.id)
+#   end
+# end
+
+  
+
 
 
 

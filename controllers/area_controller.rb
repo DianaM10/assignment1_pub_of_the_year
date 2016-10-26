@@ -10,7 +10,9 @@ end
 #show
 get '/areas/:id' do
   @pubs = Pub.all
-  @area =Area.find(params['id'])
+  @area = Area.find(params['id'])
+  @pubs_in_area = @area.find_pubs_in_area()
+  # binding.pry
   erb(:'areas/show')
 end
 

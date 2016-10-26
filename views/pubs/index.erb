@@ -1,8 +1,8 @@
-<div>
-  <% @pubs.each do |pub| %>
-  <a href="/pubs/<%= pub.id  %>"><%= pub.name %></a>  - Address: <%= pub.address %><br><hr>
+<div align="center">
+  <% @pubs.each do |pub| %><br>
+  <a href="/pubs/<%= pub.id  %>"><%= pub.name %></a><br> <%= pub.address %><br><!-- <hr> -->
   <% end %>
-
+<br>
   <a href="/pubs/new">Add new pub</a><br>
   
 </div>

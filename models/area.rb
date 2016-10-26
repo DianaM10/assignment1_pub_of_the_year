@@ -30,6 +30,13 @@ attr_reader( :id, :area_name)
     return Area.map_item(sql)
   end
 
+  def find_pubs_in_area()
+    sql = "SELECT * FROM pubs WHERE area_id = #{@id}"
+    return Pub.map_items(sql)
+  end
+
+
+
   def self.map_items(sql)
     areas = SqlRunner.run(sql)
     result = areas.map { |area| Area.new( area) }

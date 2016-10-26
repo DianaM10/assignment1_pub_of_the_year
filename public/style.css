@@ -10,6 +10,7 @@
   margin-left: 20px;
   font-size: 30px;
   font-weight: 600;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .go_left {
@@ -22,6 +23,7 @@
 
 nav {
   background-color: lightgrey;
+  background-size: 300px 600px;
   height: 65px;
   position: fixed;
   width: 100%;
@@ -47,6 +49,7 @@ nav ul li a{
   margin-left: 20px;
   font-size: 20px;
   font-weight: 600;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .box {
@@ -60,26 +63,12 @@ main {
   background-color: white;
   overflow: scroll;
   min-height: 50em;
-}
-
-/*h1 {
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    line-height: 0;
-    padding: 0;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 45px;
-}
-h1 span {
-    background: #fff;
-    padding: 0 15px;
-}
-
-h2 {
   font-family: 'Russo One', sans-serif;
-  color: black;
-  font-size: 21px;
-  text-align: center;
-  width: 600px;
-  margin: 20px auto 20px auto;
-}*/
+  font-size: 15px;
+  font-weight: 100;
+  
+  
+}
+
+
+

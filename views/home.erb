@@ -1,20 +1,40 @@
 <div>
-<table>
+<table align="center">
 <tr>
-  <th>Pub</th>
-  <th>Score</th>
+  <th><font size="5">Pub</th></font>
+  <th><font size="5">Score</th></font>
 </tr>
   <% @league_table.each do |pub| %>
 
   <tr>
-    <td><%= pub[0] %></td>
+    <td align="left"><%= pub[0] %></td>
   
-    <td><%= pub[1] %></td>
+    <td align="center"><%= pub[1] %></td>
  </tr>
   <% end %>
 
 </table>
-  
+ <br>
+
+<!--  <table>
+ <tr>
+   <th>Area</th>
+   <th>Score</th>
+ </tr>
+   <% @analysis.areas.each do |area| %>
+   <tr>
+     <td><%#= pub[0] %></td>
+     <%= area.area_name %>
+    <% area.find_pubs_in_area.each do |pub| %>
+      <%= pub.name %> <%= Analysis.find_points_for_pub(pub.id)%>
+    <% end %><br>
+     <td><%#= pub[1] %></td>
+  </tr>
+   <% end %>
+
+ </table> -->
+
+
 </div>
 
 
