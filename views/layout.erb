@@ -2,9 +2,25 @@
 <html>
 <head>
   <title>Pub of the Year 2016</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
-<%= yield %>
-<!-- <a href="/pubs">Pubs</a> -->
+<nav>
+  <div class="go_left">
+    <div class="logo">Pub of the Year 2016</div>
+  </div>
+  <div class="go_right">
+    <ul>
+      <li><a href="/pubs">Pubs</a></li>
+      <li><a href="/votes">Votes</a></li>
+      <li><a href="/areas">Areas</a></li>
+    </ul>
+  </div>
+  </nav>
+  <main>
+    <%= yield %>
+    <!-- <a href="/pubs">Pubs</a> -->
+  </main>
+
 </body>
 </html>

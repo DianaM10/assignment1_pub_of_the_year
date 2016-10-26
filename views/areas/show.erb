@@ -1,0 +1,7 @@
+<div>
+  <h1 ><%= @area.area_name %></h1>
+  <% @pubs.each do |pub| %>
+  <a href="/areas/<%= pub.area_id  %>"><%= pub.name%></a>
+  <% end %>
+</div>
+

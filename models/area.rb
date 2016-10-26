@@ -25,6 +25,11 @@ attr_reader( :id, :area_name)
     SqlRunner.run(sql)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM areas WHERE id = #{id}"
+    return Area.map_item(sql)
+  end
+
   def self.map_items(sql)
     areas = SqlRunner.run(sql)
     result = areas.map { |area| Area.new( area) }

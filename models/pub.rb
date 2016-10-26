@@ -27,6 +27,12 @@ attr_reader( :id, :name, :address, :area_id)
     return Pub.map_item(sql)
   end
 
+  def self.find_by_name(name)
+    sql = "SELECT * FROM pubs WHERE name = '#{name}'"
+    return Pub.map_item(sql)
+#return the pub by name or nil
+  end
+
   def self.delete_all()
     sql = "DELETE FROM pubs"
     SqlRunner.run(sql)
